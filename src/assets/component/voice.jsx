@@ -17,7 +17,7 @@ export const Voice_ = () => {
 
     let stream = null
     let audioRef = useRef()
-    const gotpeerConnection = new RTCPeerConnection({
+    const peerConnection = new RTCPeerConnection({
         iceServers: [
             { urls: "stun:stun.l.google.com:19302" }
         ]
