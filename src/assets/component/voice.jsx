@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useRef } from "react"
 import { io } from "socket.io-client";
 // import { URL } from "./chat";
 export const Voice_ = () => {
-    const socket = useMemo(() => io("http://localhost:5000"), []);
+    const socket = useMemo(() => io("https://backend-virid-gamma-gtvuhe17sx.vercel.app/"), []);
     console.log(socket)
 
     useEffect(() => {
@@ -17,7 +17,7 @@ export const Voice_ = () => {
 
     let stream = null
     let audioRef = useRef()
-    const peerConnection = new RTCPeerConnection({
+    const gotpeerConnection = new RTCPeerConnection({
         iceServers: [
             { urls: "stun:stun.l.google.com:19302" }
         ]
