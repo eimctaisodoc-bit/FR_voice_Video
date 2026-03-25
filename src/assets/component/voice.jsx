@@ -5,7 +5,7 @@ export const Voice_ = () => {
     const socket = useMemo(() => io("https://backend-virid-gamma-gtvuhe17sx.vercel.app/",{
   path: "/socket.io/",
   transports: ["polling"], 
-  withCredentials: true
+ 
 }), []);
     console.log(socket)
 
