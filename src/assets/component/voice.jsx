@@ -2,7 +2,11 @@ import React, { useEffect, useMemo, useRef } from "react"
 import { io } from "socket.io-client";
 // import { URL } from "./chat";
 export const Voice_ = () => {
-    const socket = useMemo(() => io("https://backend-virid-gamma-gtvuhe17sx.vercel.app/"), []);
+    const socket = useMemo(() => io("https://backend-virid-gamma-gtvuhe17sx.vercel.app/",{
+  path: "/socket.io/",
+  transports: ["polling"], 
+  withCredentials: true
+}), []);
     console.log(socket)
 
     useEffect(() => {
